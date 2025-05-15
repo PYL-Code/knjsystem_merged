@@ -1,0 +1,74 @@
+INSERT INTO T_SG_A001 (
+    LOGIN_ID,
+    PASSWORD,
+    BNS_NO,
+    COMP_NM,
+    COMP_CODE,     -- 새로 추가된 업체 코드
+    COMP880_CD,
+    COMP_TYPE,
+    REP_NM,
+    REP_PHONE_NO,
+    REP_FAX_NO,
+    ZIPCODE,
+    ADDR1,
+    ADDR2,
+    AUTH_MAG_YN,   -- 기업 관리자 여부
+    APPROVAL_YN,
+    DEL_YN
+) VALUES (
+             'test123',               -- 로그인 ID
+             'test123',               -- 비밀번호 (암호화 필요)
+             '1234567890',            -- 사업자등록번호
+             '그린농산물유통',         -- 업체명
+             'COMP001',               -- 업체 코드
+             '8801234567890',         -- GLN 코드
+             'P',                     -- 업태구분 (P=생산자)
+             '홍길동',                -- 담당자 이름
+             '010-1234-5678',         -- 담당자 전화번호
+             '02-1234-5678',          -- 팩스번호
+             '12345',                 -- 우편번호
+             '서울특별시 종로구',       -- 주소1
+             '1층 101호',             -- 주소2
+             'Y',                     -- 기업 관리자 여부 (Y/N)
+             'Y',                     -- 승인 여부 (Y/N)
+             'N'                      -- 삭제 여부 (Y/N)
+         );
+
+INSERT INTO TSG_B001 (
+    BARCODE_NUMBER,
+    PRODUCT_NAME,
+    PRODUCT_TYPE,
+    PRODUCT_STATUS,
+    HANDLER_NAME
+) VALUES (
+             '8809476190787',     -- 바코드 번호
+             '모둠쌈92kg',        -- 상품명
+             '채소류',            -- 상품구분
+             '유통중',            -- 상품상태
+             '그린농산물유통'     -- 취급자명 (사용자와 연동 가능)
+         );
+
+INSERT INTO TSG_B002 (
+    CERTIFICATION_CODE,
+    FARMER_NAME,
+    CERTIFICATION_STATUS,
+    PRODUCT_CODE_NAME,
+    CERTIFICATION_AGENCY,
+    BARCODE_PRODUCT_ID
+) VALUES
+      (
+          '23-3-935',            -- 인증번호
+          '강대건',              -- 농가명
+          '인증',                -- 인증상태
+          '오이(090100)',        -- 상품명(코드)
+          '(사)한국식품인증원',  -- 인증기관
+          1                      -- FK: TSG_B001 ID
+      ),
+      (
+          '30-1-1165',
+          '김인혁',
+          '인증',
+          '토마토(120500)',
+          '한국친환경농업협회',
+          1
+      );

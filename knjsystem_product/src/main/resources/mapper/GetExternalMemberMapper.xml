@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.du.knjsystem_product.mapper.MemberMapper">
+
+    <!-- 1. loginId 중복 여부 확인 (존재하면 1, 없으면 0) -->
+    <select id="existByLoginId" resultType="int">
+        SELECT COUNT(*)
+        FROM T_SG_A001
+        WHERE LOGIN_ID = #{loginId}
+    </select>
+
+    <!-- 2. 회원 등록 -->
+    <insert id="insertUser">
+        INSERT INTO T_SG_A001 (
+            LOGIN_ID, BNS_NO, COMP_NM, COMP880_CD, COMP_TYPE,
+            REP_NM, REP_PHONE_NO, REP_FAX_NO, ZIPCODE, ADDR1, ADDR2,
+            REGIST_DATE, APPROVAL_YN, DEL_YN
+        ) VALUES (
+                     #{loginId}, #{bnsNo}, #{compNm}, #{comp880Cd}, #{compType},
+                     #{repNm}, #{repPhoneNo}, #{repFaxNo}, #{zipcode}, #{addr1}, #{addr2},
+                     #{registDate}, #{approvalYn}, #{delYn}
+                 )
+    </insert>
+
+    <!-- 3. 회원 정보 수정 -->
+    <update id="updateUser">
+        UPDATE T_SG_A001
+        SET
+            BNS_NO        = #{bnsNo},
+            COMP_NM       = #{compNm},
+            COMP880_CD    = #{comp880Cd},
+            COMP_TYPE     = #{compType},
+            REP_NM        = #{repNm},
+            REP_PHONE_NO  = #{repPhoneNo},
+            REP_FAX_NO    = #{repFaxNo},
+            ZIPCODE       = #{zipcode},
+            ADDR1         = #{addr1},
+            ADDR2         = #{addr2},
+            REGIST_DATE   = #{registDate},
+            APPROVAL_YN   = #{approvalYn},
+            DEL_YN        = #{delYn}
+        WHERE LOGIN_ID = #{loginId}
+    </update>
+
+</mapper>
