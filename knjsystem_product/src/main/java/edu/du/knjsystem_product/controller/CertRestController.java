@@ -3,10 +3,9 @@ package edu.du.knjsystem_product.controller;
 import edu.du.knjsystem_product.dto.BarcodeAddCertListDto;
 import edu.du.knjsystem_product.dto.BarcodeAddCertSearchDto;
 import edu.du.knjsystem_product.dto.BarcodeDetailCertInfoDto;
-import edu.du.knjsystem_product.external.dto.CertOutDto;
-import edu.du.knjsystem_product.service.CertDomParserService;
+import edu.du.knjsystem_product.externalDB.dto.CertOutDto;
+import edu.du.knjsystem_product.service.ExternalCertDomParserService;
 import edu.du.knjsystem_product.service.CertService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,17 +16,17 @@ import java.util.List;
 public class CertRestController {
 
     private final CertService certService;
-    private final CertDomParserService certDomParserService;
+    private final ExternalCertDomParserService externalCertDomParserService;
 
-    public CertRestController(CertService certService, CertDomParserService certDomParserService) {
+    public CertRestController(CertService certService, ExternalCertDomParserService externalCertDomParserService) {
         this.certService = certService;
-        this.certDomParserService = certDomParserService;
+        this.externalCertDomParserService = externalCertDomParserService;
     }
 
 
     @GetMapping("/external-list")
     public List<CertOutDto> getExternalCertList() {
-        return certDomParserService.fetchCertInfoFromExternal();
+        return externalCertDomParserService.fetchCertInfoFromExternal();
     }
 
 

@@ -1,6 +1,6 @@
 package edu.du.userservice.service;
 
-import edu.du.userservice.dto.SendExternalMember;
+import edu.du.userservice.dto.SendExternalMemberDto;
 import edu.du.userservice.entity.TsgA001;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -21,7 +21,7 @@ public class ExternalSyncService {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-        SendExternalMember dto = SendExternalMember.builder()
+        SendExternalMemberDto dto = SendExternalMemberDto.builder()
                 .seqNoA001(user.getSeqNoA001())
                 .loginId(user.getLoginId())
                 .bnsNo(user.getBnsNo())

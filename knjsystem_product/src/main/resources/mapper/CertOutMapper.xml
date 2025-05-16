@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="edu.du.knjsystem_product.external.mapper.OutDBMapper">
+<mapper namespace="edu.du.knjsystem_product.externalDB.mapper.OutDBMapper">
 
-    <resultMap id="certOutResultMap" type="edu.du.knjsystem_product.external.dto.CertOutDto">
+    <resultMap id="certOutResultMap" type="edu.du.knjsystem_product.externalDB.dto.CertOutDto">
         <result property="seqNoA003" column="SEQ_NO_A003"/>
         <result property="rcvSeq" column="RCV_SEQ"/>
         <result property="modSeq" column="MOD_SEQ"/>

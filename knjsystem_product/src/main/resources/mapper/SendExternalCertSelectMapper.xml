@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.du.knjsystem_product.mapper.SendMapper">
+
+    <select id="selectExternalCertInfoByBarcodeId" resultType="edu.du.knjsystem_product.dto.SendExternalCertDto">
+        SELECT
+        A003.SEQ_NO_A003 AS certId,
+        A003.STD_CERT_NO AS certificationCode,
+        A003.FRMR_NM     AS farmerName,
+        A003.CERT_STATE_NM AS certificationStatus,
+        A003.ITEM_NM     AS productCodeName,
+        A003.CERT_GB_NM  AS certificationAgency,
+        A004.PRDR_BAR_CD AS barcode
+        FROM T_SG_A003 A003
+        JOIN T_SG_A004 A004 ON A003.SEQ_NO_A003 = A004.SEQ_NO_A003
+        WHERE A004.SEQ_NO_A004 = #{barcodeId}
+    </select>
+</mapper>

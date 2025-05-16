@@ -1,7 +1,6 @@
 package edu.du.knjsystem_product.mapper;
 
 import edu.du.knjsystem_product.dto.CertInsertDto;
-import edu.du.knjsystem_product.external.dto.CertOutDto;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
