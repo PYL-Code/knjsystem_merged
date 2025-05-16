@@ -168,7 +168,7 @@ export default {
         return;
       }
       try {
-        const { data } = await axios.get('/user/users/check-id', {
+        const { data } = await axios.get('/users/check-id', {
           params: { loginId: this.form.loginId }
         });
         if (data.exists) {
@@ -193,7 +193,7 @@ export default {
         return;
       }
       try {
-        await axios.post('/user/users/register', this.form);
+        await axios.post('/users/register', this.form);
         this.$router.push('/');
       } catch (err) {
         this.message = '회원가입 실패: ' + (err.response?.data || '서버 오류');

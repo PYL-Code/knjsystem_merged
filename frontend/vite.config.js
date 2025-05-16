@@ -24,8 +24,13 @@ export default defineConfig({
         changeOrigin: true,  // 원본 출처를 변경하여 요청 보내기
         secure: false,  // HTTPS를 사용할 경우 설정
       },
-      '/board': {
-        target: 'http://localhost:8000',
+      '/products': {
+        target: 'http://localhost:8081',  // API 서버 주소
+        changeOrigin: true,  // 원본 출처를 변경하여 요청 보내기
+        secure: false,  // HTTPS를 사용할 경우 설정
+      },
+      '/boards': {
+        target: 'http://localhost:8082',
         changeOrigin: true,
         secure: false
       },

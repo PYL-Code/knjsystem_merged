@@ -39,7 +39,7 @@ const router = useRouter();
 
 const login = async () => {
   try {
-    const response = await axios.post('/user/users/info', {
+    const response = await axios.post('/users/info', {
       loginId: loginId.value,
       password: password.value
     });

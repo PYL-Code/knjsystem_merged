@@ -28,7 +28,7 @@ const route = useRoute();
 const board = ref({});
 
 const fetchBoard = async () => {
-  const res = await axios.get(`/board/boards/${route.params.id}`);
+  const res = await axios.get(`/boards/${route.params.id}`);
   board.value = res.data;
 };
 

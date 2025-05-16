@@ -85,7 +85,7 @@ const submitEdit = async () => {
   try {
     const token = currentUser.token;
     await axios.put(
-        '/user/users/update',
+        '/users/update',
         form,
         { headers: { Authorization: `Bearer ${token}` }}
     );

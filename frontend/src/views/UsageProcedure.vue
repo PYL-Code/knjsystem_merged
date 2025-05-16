@@ -44,7 +44,7 @@
             </ul>
           </li>
         </ul>
-        <button class="btn">회원가입 바로가기</button>
+        <RouterLink to="/form"><button class="btn">회원가입 바로가기</button></RouterLink>
       </div>
 
       <!-- Step 3 -->
@@ -198,3 +198,5 @@
   }
 }
 </style>
+<script setup lang="ts">
+</script>

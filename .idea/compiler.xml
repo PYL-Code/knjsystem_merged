@@ -18,4 +18,38 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="-parameters" />
+      <module name="admin.board-service" options="-parameters" />
+      <module name="admin.board-service.main" options="-parameters" />
+      <module name="admin.board-service.test" options="-parameters" />
+      <module name="admin.eureka-server" options="-parameters" />
+      <module name="admin.eureka-server.main" options="-parameters" />
+      <module name="admin.eureka-server.test" options="-parameters" />
+      <module name="admin.gateway-service" options="-parameters" />
+      <module name="admin.gateway-service.main" options="-parameters" />
+      <module name="admin.gateway-service.test" options="-parameters" />
+      <module name="admin.knjsystem_product" options="-parameters" />
+      <module name="admin.knjsystem_product.main" options="-parameters" />
+      <module name="admin.knjsystem_product.test" options="-parameters" />
+      <module name="admin.main" options="-parameters" />
+      <module name="admin.test" options="-parameters" />
+      <module name="admin.user-service" options="-parameters -parameters" />
+      <module name="admin.user-service.main" options="-parameters -parameters" />
+      <module name="admin.user-service.test" options="-parameters -parameters" />
+      <module name="board-service" options="-parameters" />
+      <module name="board-service.main" options="-parameters" />
+      <module name="board-service.test" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="eureka-server.main" options="-parameters" />
+      <module name="eureka-server.test" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
+      <module name="gateway-service.main" options="-parameters" />
+      <module name="gateway-service.test" options="-parameters" />
+      <module name="user-service" options="-parameters -parameters" />
+      <module name="user-service.main" options="-parameters -parameters" />
+      <module name="user-service.test" options="-parameters -parameters" />
+    </option>
+  </component>
 </project>

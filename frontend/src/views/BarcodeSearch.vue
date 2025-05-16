@@ -16,7 +16,7 @@
         <li><strong>상품명:</strong> {{ product.productName }}</li>
         <li><strong>상품 구분:</strong> {{ product.productType }}</li>
         <li><strong>상품 상태:</strong> {{ product.productStatus }}</li>
-        <li><strong>취급자명:</strong> {{ product.handlerName }}</li>
+        <li><strong>생산자명:</strong> {{ product.handlerName }}</li>
       </ul>
 
       <h3 class="section-title">✅ 인증 정보 목록</h3>
@@ -29,8 +29,8 @@
           <li><strong>인증번호:</strong> {{ cert.certificationCode }}</li>
           <li><strong>농가명:</strong> {{ cert.farmerName }}</li>
           <li><strong>인증상태:</strong> {{ cert.certificationStatus }}</li>
-          <li><strong>상품명(코드):</strong> {{ cert.productCodeName }}</li>
-          <li><strong>인증기관:</strong> {{ cert.certificationAgency }}</li>
+          <li><strong>상품명:</strong> {{ cert.productCodeName }}</li>
+          <li><strong>인증구분:</strong> {{ cert.certificationAgency }}</li>
         </ul>
       </div>
     </div>
@@ -50,7 +50,7 @@ export default {
   methods: {
     async searchBarcode() {
       try {
-        const res = await axios.get(`/user/products/barcode/${this.barcode}`);
+        const res = await axios.get(`/products/barcode/${this.barcode}`);
         this.product = res.data;
       } catch (error) {
         alert("해당 바코드로 등록된 상품이 없습니다.");

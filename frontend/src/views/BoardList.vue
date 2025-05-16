@@ -62,7 +62,7 @@ export default {
   },
   methods: {
     fetchBoards() {
-       axios.get(`/board/boards`, {
+       axios.get(`/boards`, {
         params: {
           keyword: this.searchText,
           page: this.currentPage - 1,
