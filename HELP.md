@@ -67,30 +67,61 @@ npm run dev
 
 ### ▶️ 백엔드 실행
 
-eureka-server ->  user-service ->  board-service -> knjsystem_product -> gateway-service 순서로 실행
+다음 순서로 실행
+1. eureka-server
+2. user-service
+3. board-service 
+4. knjsystem_product 
+5. gateway-service
 
 ***
 
 ## ✅ 5. 주요 기능
 
 ### 사용자 측 기능
-- 회원가입 / 로그인 / 로그아웃
-  - 상태 유지 (localStorage 기반)
+- 회원가입 / 로그인 / 로그아웃 (localStorage 기반 인증 상태 유지)
 - 마이페이지 (사용자 정보 수정)
 - 공지사항 목록 조회 / 상세 보기
 - 상품 바코드 관리 (생산자/취급자)
   - 상품 바코드 등록 및 삭제
   - 상품 바코드별 인증정보 등록 및 삭제
 - 바코드 조회 시스템 (소비자)
-  - 바코드 입력 후 상품정보 조회
 
 ### 시스템 기능
 - JWT 인증 기반 보안 처리
 - Spring Cloud Gateway를 통한 서비스 라우팅
 - Eureka를 통한 서비스 등록/탐색
-- MSA 기반 서비스 간 분리 구조 설계
+- MSA 기반 분리 구조 서비스 간 RESTful 연동
 
 ***
+
+## 6. 서비스 설명
+### 1. gateway-service
+- CORS 처리
+
+### 2. eureka-server
+- 각 서비스 등록/관리
+
+### 3. board-service
+- 공지사항 조회
+
+### 4. user-service
+- 로그인 및 회원가입
+  - 테스트 id: test123
+  - 테스트 pw: test123
+- JWT 발급 및 유효성 검증
+- 마이 페이지 (회원정보 수정)
+- 소비자용 바코드 조회
+- 타 모듈과의 데이터 연동
+  - rest api를 사용한 knjsystem-product 모듈과의 데이터 연동
+
+### 5. knjsystem_product
+- 사용자별 상품 바코드 조회 및 관리
+  - 상품 바코드 등록 및 삭제
+  - 상품 바코드별 인증번호 등록 및 삭제
+- 타 모듈과의 데이터 연동
+  - rest api를 사용한 user-service 모듈과의 데이터 연동
+- 외부 DB와 웹 방식으로 데이터 연동
 
 ## 💻 개발 노트
 
