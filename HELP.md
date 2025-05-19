@@ -1,6 +1,6 @@
 # 🌱 친환경 농산물 인증/조회 시스템
 
-Vue.js + Spring Boot 기반의 친환경 농산물 인증 및 유통 정보 관리 시스템 
+Vue.js + Spring Boot 기반의 친환경 농산물 인증 및 유통 정보 관리 시스템  
 MSA 구조와 Gateway, JWT 기반 인증을 도입하여 확장성과 보안성을 고려해 설계
 
 ---
@@ -52,6 +52,7 @@ admin/
 ├── build.gradle            # 루트 빌드 설정   
 ├── settings.gradle         # 서브모듈 포함 설정   
 ```
+
 ---
 
 ## 🚀 4. 실행 방법
@@ -81,6 +82,7 @@ eureka-server ->  user-service ->  board-service -> knjsystem_product -> gateway
   - 상품 바코드 등록 및 삭제
   - 상품 바코드별 인증정보 등록 및 삭제
 - 소비자 바코드 조회 시스템
+  - 바코드 입력 후 상품정보 조회
 
 ### 관리자 또는 시스템 기능
 - JWT 인증 기반 보안 처리
