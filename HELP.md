@@ -84,7 +84,7 @@ eureka-server ->  user-service ->  board-service -> knjsystem_product -> gateway
 - 바코드 조회 시스템 (소비자)
   - 바코드 입력 후 상품정보 조회
 
-### 관리자 또는 시스템 기능
+### 시스템 기능
 - JWT 인증 기반 보안 처리
 - Spring Cloud Gateway를 통한 서비스 라우팅
 - Eureka를 통한 서비스 등록/탐색
@@ -96,9 +96,3 @@ eureka-server ->  user-service ->  board-service -> knjsystem_product -> gateway
 
 ### 📌 향후 개발 예정
 - ✅ 관리자 페이지에서 농산물 인증 정보 등록 및 사용자 권한 부여
-
-
-### 🧑‍💻 개발자 메모
-- 상태 관리 방식은 Pinia가 아닌 localStorage 기반으로 구현되어 있으며, 초기 상태 처리 및 인증 확인은 main.js에서 이루어집니다.
-- Tailwind CSS는 도입되지 않았으며, 기본적인 CSS 스타일링만 포함되어 있습니다.
-
