@@ -120,7 +120,7 @@ onMounted(fetchUserInfo);
 .insert-title {
   text-align: center;
   font-size: 2rem;
-  color: #2b4c7e;
+  color: #2e7d32; /* 초록 */
   margin-bottom: 2rem;
 }
 
@@ -133,8 +133,8 @@ onMounted(fetchUserInfo);
 
 .user-card {
   flex: 1;
-  background: #f0f4f8;
-  border: 1px solid #d0d7e2;
+  background: #e8f5e9; /* 연한 초록 배경 */
+  border: 1px solid #c8e6c9; /* 초록 테두리 */
   border-radius: 6px;
   padding: 1rem;
   text-align: center;
@@ -158,10 +158,10 @@ onMounted(fetchUserInfo);
 .form-label {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #2b4c7e;
+  color: #2e7d32; /* 초록 */
   margin-bottom: 0.5rem;
   display: block;
-  border-left: 4px solid #2b4c7e;
+  border-left: 4px solid #2e7d32;
   padding-left: 0.6rem;
 }
 
@@ -181,7 +181,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  border-color: #2b4c7e;
+  border-color: #2e7d32; /* 초록 */
   outline: none;
 }
 
@@ -219,14 +219,15 @@ input[type="radio"] {
 }
 
 .btn-submit {
-  background-color: #1f8249;
+  background-color: #1f8249; /* 진한 녹색 */
   color: white;
 }
 
 .btn-cancel {
-  background-color: #2b4c7e;
+  background-color: #878a87; /* 초록 */
   color: white;
   text-decoration: none;
   line-height: 1.8rem;
 }
 </style>
+

@@ -17,7 +17,7 @@ export const currentUser = reactive({
             this.token = savedToken
 
             try {
-                await axios.get('/user/users/check', {
+                await axios.get('/users/check', {
                     headers: { Authorization: `Bearer ${this.token}` }
                 });
             } catch (err) {

@@ -178,7 +178,7 @@ const deleteBarcode = async () => {
 .detail-title {
   text-align: center;
   font-size: 2rem;
-  color: #2b4c7e;
+  color: #2e7d32; /* 초록 */
   margin-bottom: 2rem;
 }
 .user-info {
@@ -189,8 +189,8 @@ const deleteBarcode = async () => {
 }
 .user-card {
   flex: 1;
-  background: #f0f4f8;
-  border: 1px solid #d0d7e2;
+  background: #e8f5e9; /* 연한 초록 배경 */
+  border: 1px solid #c8e6c9; /* 초록 테두리 */
   padding: 1rem;
   border-radius: 6px;
   text-align: center;
@@ -222,8 +222,8 @@ const deleteBarcode = async () => {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #2b4c7e;
-  border-left: 4px solid #2b4c7e;
+  color: #2e7d32; /* 초록 */
+  border-left: 4px solid #2e7d32;
   padding-left: 0.6rem;
 }
 .info-grid {
@@ -270,7 +270,7 @@ const deleteBarcode = async () => {
   padding: 0.6rem 1.2rem;
 }
 .btn-back {
-  background-color: #2b4c7e;
+  background-color: #2e7d32; /* 초록 */
   color: white;
   text-decoration: none;
   padding: 0.6rem 1.2rem;
@@ -292,14 +292,14 @@ const deleteBarcode = async () => {
   border-bottom: 1px solid #ccc;
 }
 .info-row.alt {
-  background-color: #f8f9fa;
+  background-color: #f1f8f4; /* 초록톤 대체 행 */
 }
 .info-label {
   width: 160px;
   padding: 0.75rem;
-  background-color: #f0f4f8;
+  background-color: #e8f5e9; /* 연한 초록 */
   font-weight: bold;
-  color: #2b4c7e;
+  color: #2e7d32; /* 초록 */
   border-right: 1px solid #ccc;
 }
 .info-value {

@@ -13,7 +13,7 @@ onMounted(async () => {
 
   if (savedUser && savedToken) {
     try {
-      await axios.get('/user/users/check', {
+      await axios.get('/users/check', {
         headers: { Authorization: `Bearer ${savedToken}` }
       });
       currentUser.user = JSON.parse(savedUser);

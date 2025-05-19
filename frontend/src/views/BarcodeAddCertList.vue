@@ -161,7 +161,7 @@ onMounted(async () => {
 
 .cert-title {
   text-align: center;
-  color: #2b4c7e;
+  color: #2e7d32; /* 진한 초록색 */
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -183,7 +183,7 @@ onMounted(async () => {
 
 .cert-form button {
   padding: 0.6rem 1.5rem;
-  background-color: #2b4c7e;
+  background-color: #2e7d32; /* 초록색 */
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -199,17 +199,17 @@ onMounted(async () => {
 }
 
 .cert-table thead {
-  background-color: #e9f0f6; /* 연한 회색-블루 */
+  background-color: #e0f2f1; /* 연한 청록색 */
 }
 
 .cert-table th {
-  color: #2b4c7e; /* 진한 블루 */
+  color: #2e7d32; /* 진한 초록 */
   font-weight: 600;
   font-size: 0.95rem;
-  border-top: 2px solid #c9d6e2;
+  border-top: 2px solid #a5d6a7;
   padding: 0.75rem;
   text-align: center;
-  background-color: #e9f0f6;
+  background-color: #e0f2e6;
 }
 
 .cert-table td {
@@ -236,7 +236,7 @@ onMounted(async () => {
 .radio-wrapper .checkmark {
   width: 16px;
   height: 16px;
-  border: 2px solid #2b4c7e;
+  border: 2px solid #2e7d32;
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -246,7 +246,7 @@ onMounted(async () => {
   content: "";
   width: 8px;
   height: 8px;
-  background: #2b4c7e;
+  background: #2e7d32;
   border-radius: 50%;
   position: absolute;
   top: 4px;
@@ -262,7 +262,7 @@ onMounted(async () => {
 
 .btn-submit {
   padding: 0.7rem 1.5rem;
-  background-color: #1f8249;
+  background-color: #388e3c; /* 녹색 */
   color: white;
   border: none;
   border-radius: 5px;
@@ -278,7 +278,7 @@ onMounted(async () => {
 
 .btn-deny {
   padding: 0.7rem 1.5rem;
-  background-color: #2b4c7e;
+  background-color: #2e7d32;
   color: white;
   border: none;
   border-radius: 5px;
@@ -287,4 +287,5 @@ onMounted(async () => {
   cursor: pointer;
 }
 </style>
+
 
