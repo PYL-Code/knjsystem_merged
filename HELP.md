@@ -92,6 +92,9 @@ npm run dev
 - Spring Cloud Gateway를 통한 서비스 라우팅
 - Eureka를 통한 서비스 등록/탐색
 - MSA 기반 분리 구조 서비스 간 RESTful 연동
+- 외부 데이터베이스 자동 연동
+  - 외부 기관의 url에 주기적으로 접근 (스케줄링 기반)
+  - xml 형식 응답을 DOM Parser로 파싱 후 내부 db 데이터에 저장
 
 ***
 
